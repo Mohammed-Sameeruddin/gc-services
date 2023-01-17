@@ -12,6 +12,10 @@ jobs:
       matrix:
         dir: ['Backend/jobs-microservice', 'Backend/microservice-location', 'Backend/routes-microservice', 'Backend/skills-microservice']
         
+    defaults:
+      run:
+        working-directory: ${{ matrix.dir }}
+        
     steps:
     
     - name: Checkout repository
