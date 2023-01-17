@@ -1,0 +1,11 @@
+server:
+  port: 9004
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.49.2:30036/BC32-GreenCommute
+    username: root
+    password: password
+  application:
+    name: JOB-SERVICE
+
