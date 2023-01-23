@@ -29,7 +29,7 @@ jobs:
         cache: maven
 
     - name: Build jar files
-      run: mvn clean install -DskipTests
+      run: mvn clean install
 
     - name: Login to GitHub Container Registry
       uses: docker/login-action@v1
