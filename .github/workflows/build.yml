@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        dir: ['./Backend/jobs-microservice', './Backend/microservice-location', './Backend/routes-microservice', './Backend/skills-microservice']
+        dir: ['jobs-microservice', 'microservice-location', 'routes-microservice', 'skills-microservice']
         
     defaults:
       run:
-        working-directory: ${{ matrix.dir }}
+        working-directory: Backend/${{ matrix.dir }}
         
     steps:
     
