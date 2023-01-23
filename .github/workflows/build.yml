@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        dir: ['jobs-microservice', 'microservice-location', 'routes-microservice', 'skills-microservice']
+        dir: ['jobs-microservice', 'microservice-location', 'routes-microservice', 'Skills-microservice']
         
     defaults:
       run:
@@ -27,6 +27,9 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
+
+    - name: Build jar files
+      run: mvn clean install -DskipTests
 
     - name: Login to GitHub Container Registry
       uses: docker/login-action@v1
