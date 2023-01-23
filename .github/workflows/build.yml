@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        dir: ['Backend/jobs-microservice', 'Backend/microservice-location', 'Backend/routes-microservice', 'Backend/skills-microservice']
+        dir: ['./Backend/jobs-microservice', './Backend/microservice-location', './Backend/routes-microservice', './Backend/skills-microservice']
         
     defaults:
       run:
@@ -37,7 +37,7 @@ jobs:
         
     - name: Build the Docker image
       run: |
-        docker build . --tag ghcr.io/${{secrets.OWNER}}/${{matrix.dir.toLowerCase() }}:${{ github.run_number }}
+        docker build . --tag ghcr.io/${{secrets.OWNER}}/${{matrix.dir}}:${{ github.run_number }}
         docker push ghcr.io/${{secrets.OWNER}}/${{matrix.dir.toLowerCase() }}:${{ github.run_number }}
         
         
