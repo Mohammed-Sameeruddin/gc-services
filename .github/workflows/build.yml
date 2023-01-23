@@ -38,6 +38,6 @@ jobs:
     - name: Build the Docker image
       run: |
         docker build . --tag ghcr.io/${{secrets.OWNER}}/${{matrix.dir}}:${{ github.run_number }}
-        docker push ghcr.io/${{secrets.OWNER}}/${{matrix.dir.toLowerCase() }}:${{ github.run_number }}
+        docker push ghcr.io/${{secrets.OWNER}}/${{matrix.dir }}:${{ github.run_number }}
         
         
