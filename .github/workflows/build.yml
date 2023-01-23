@@ -41,7 +41,7 @@ jobs:
         
     - name: Build the Docker image
       run: |
-        docker build . --tag ghcr.io/$username/${{matrix.dir}}:${{ github.run_number }}
-        docker push ghcr.io/$username/${{matrix.dir }}:${{ github.run_number }}
+        docker build . --tag ghcr.io/Mohammed-Sameeruddin/${{matrix.dir}}:${{ github.run_number }}
+        docker push ghcr.io/Mohammed-Sameeruddin/${{matrix.dir }}:${{ github.run_number }}
         
         
