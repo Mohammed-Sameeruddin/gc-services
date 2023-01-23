@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        dir: ['jobs-microservice', 'microservice-location', 'routes-microservice', 'Skills-microservice']
+        dir: ['jobs-microservice', 'microservice-location', 'routes-microservice', 'skills-microservice']
         
     defaults:
       run:
